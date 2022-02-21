@@ -1,0 +1,290 @@
+:root {
+	--fuenteheading:  'Playfair Display', serif;
+	--fuentesparrafos: 'Montserrat', sans-serif;
+ 	--fuentenueva: 'Cinzel', serif;
+
+	--primario: #d9b34e;
+	--blanco: #ffffff;
+	--negro: #000000;
+	--secundario: #5ec2d0;
+	--grisoscuro: #7e7e7e;
+	--grisclaro: #e3e0e0;
+	--rosa: #f4f5f6;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: var(--fuentesparrafos);
+	font-size: 1.6rem;
+	line-height: 1;
+}
+
+/* globales */
+.contenedor {
+	width: min(90%,120rem);
+	margin:  auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, {
+	font-family: var(fuentenueva);
+	line-height: 1.2;
+}
+
+h3,h4 {
+	font-family: var(--fuentesparrafos);
+}
+h1 {
+	font-size: 3.8rem;
+	
+}
+
+h2 {
+	font-size: 4.2rem;
+	text-shadow: 1px 1px 2px var(--negro); /* le da sombra al texto */
+}
+
+h3 {
+	font-size: 3rem;
+}
+
+h4 {
+ 	font-size: 2.2rem;
+ }
+
+h5 {
+ 	font-size: 2.5rem;
+ 	font-family: 200;
+}
+
+p {
+	font-size: 1.8rem;
+	line-height: 1.8;
+	text-align: justify;
+
+}
+
+img {
+	max-width: 100%;
+}
+
+/* utilidades */
+.no-margin {
+	margin: 0;
+}
+.no-padding {
+	padding: 0;
+}
+.centrar-texto {
+	text-align: center;
+}
+
+/* abarca la parte del header */
+
+.header {
+	background-image: url(../imagenes/piramide.jpg);
+	height: 60rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.barra {
+	padding-top: 2rem;
+}
+.header_texto {
+	text-align: center;
+	color:var(--blanco);
+	font-family: 'Cinzel', serif;
+	margin: 4rem;
+}
+
+.header_texto p {
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: 1px 1px 2px var(--negro);
+	font-size: 2.2rem;
+	text-align: center;
+}
+/* el div barra incluye al logotipo y a al menu de navegacion*/
+
+@media (min-width: 768px) {
+	.header_texto {
+		margin-top: 10rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.barra {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.logo {
+	color: var(--blanco);
+	margin: 4rem;
+}
+.logo__nombre {
+	font-family: alegreya;
+
+}
+.logo__light{
+	font-family: 'Montserrat', sans-serif;;
+
+}
+@media(min-width: 768px) {
+	.navegacion {
+		display: flex;
+		gap: 1rem;
+		
+	}
+}
+.navegacion__enlace {
+	display: block;
+	text-align: center;
+	font-size: 1.8rem;
+	color: var(--blanco);
+	margin: 4rem;
+}
+
+.image{
+	width: 70%;
+	align-items: center;
+}
+
+.contenedor__principal {
+	background-color: rgba(0,0,0, .6);
+    height: 60rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+@media (min-width: 768px) {
+	.contenido-principal {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		column-gap: 4rem;
+	}
+}
+
+.entrada {
+	border-bottom: 1px solid var(--grisclaro);
+	margin-bottom: 1rem;
+}
+
+.entrada:last-of-type {
+	border: none;
+	margin-bottom: 0;
+}
+
+.boton {
+	display: block;
+	color: var(--negro);
+	text-align: center;
+	padding: 1rem 2rem;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	border: none;
+}
+
+@media (min-width: 768px) {
+	.boton {
+		display: inline-block;
+	}
+}
+
+.boton:hover {
+	cursor: pointer;
+
+}
+.boton--primario {
+	background-color: var(--primario);
+
+}
+
+.boton--secundario {
+	background-color: var(--grisclaro);
+	font-weight: 400;
+	font-size: 1rem;
+	padding: 1rem 2rem;
+
+}.noticias {
+	list-style: none;
+}
+
+.widget-noticias {
+	border-bottom: 1px solid var(--grisclaro);
+	margin-bottom: 2rem;
+}
+
+.widget-noticias:last-of-type {
+	border: none;
+	margin-bottom: 0;
+}
+
+.widget-noticias h4 {
+	color: var(--grisoscuro);
+}
+
+.footer {
+	background-color: var(--negro);
+	padding-bottom: 2rem;
+	margin-top: 2rem;
+}
+
+/* contacto */
+
+.contacto-bg {
+	background-image: url(../imagenes/interior.jpg);
+	height: 40rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.formulario {
+	background-color: var(--rosa);
+	margin: -5rem auto 0 auto;
+	width: 95%;
+	padding: 5rem;
+}
+.campo {
+	display: flex;
+	margin-bottom: 2rem;
+	gap: 2rem;
+}
+.campo__label {
+	flex: 0 0 9rem;
+	text-align: right;
+}
+.campo__field {
+	flex: 1;
+	border: 1px solid var(--grisclaro);
+}
+.campo__field--textarea {
+	height: 20rem;
+
+}
+
+@media (min-width: 768px) {
+	.formulario {
+		display: grid;
+	}
+}
+
+
+
+
